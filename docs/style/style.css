@@ -27,7 +27,7 @@
   transform: translateY(0);
 }
 
-/* top-bar 구현 시작 */
+/* top-bar */
 .top-bar {
   z-index: 99;
 }
@@ -51,7 +51,7 @@
   display: none;
 }
 
-/* 1차 메뉴 아이템 텍스트 */
+/* Menu 1 */
 .top-bar__menu-1 > ul > li {
   position: relative;
 }
@@ -113,7 +113,7 @@
 
 .top-bar__mid > .depth2-bg {
   background-color: #fff;
-  height: 28rem;
+  height: 38rem;
   width: 100vw;
   position: absolute;
   left: 0;
@@ -184,7 +184,7 @@
   opacity: 1;
 }
 
-/* 모바일 사이드 메뉴 구현 */
+/* Mobile side menu */
 .mobile-side-menu {
   background-color: #fff;
   position: absolute;
@@ -220,7 +220,7 @@
   border-radius: clamp(3rem, 3.47vw, 4rem);
 }
 
-/* 1차 메뉴 아이템 텍스트 */
+/* Menu 1 */
 .mobile-side-menu .mo-depth1 > li > :first-child {
   display: block;
   font-size: clamp(1.6rem, 4.44vw, 2.2rem);
@@ -258,7 +258,7 @@
   background-size: cover;
 }
 
-/* 2차 메뉴 */
+/* Menu 2 */
 .mobile-side-menu .mo-depth2 {
   position: relative;
   padding: clamp(1.25rem, 3.47vw, 2.5rem) clamp(2.5rem, 6.94vw, 5rem);
@@ -276,7 +276,7 @@
   transform: translateX(-50%);
 }
 
-/* 2차 메뉴 아이템 텍스트 */
+/* Menu 2 items */
 .mobile-side-menu .mo-depth2 > li > a {
   font-size: 1.85rem;
   display: block;
@@ -315,10 +315,9 @@
   width: 0.2rem;
   height: 1.5rem;
 }
-/* 모바일 사이드 메뉴 끝 */
-/* top-bar 구현 끝 */
+/* Mobile side menu END */
+/* top-bar END */
 
-/* 화면의 너비가 1025px 이하일 때  */
 /* max-width: 1025px */
 @media (1025px >= width) {
   .logo > .pc-logo-img {
@@ -347,15 +346,15 @@
     padding-bottom: 18rem;
   }
 }
-/* 탑바 구현 끝 */
+/* Top bar END */
 
-/* 섹션 구현 시작 */
+/* Sections */
 .content-wrap {
   padding: 0 5.4rem 5rem;
   overflow-x: hidden;
 }
 
-/* sec-01 구현 시작 */
+/* sec-01 */
 .sec-01 {
   position: relative;
   transform: translateY(10%);
@@ -428,9 +427,9 @@
   display: none;
 }
 
-/* sec-01 구현 끝 */
+/* sec-01 END */
 
-/* sec-02 구현 시작 */
+/* sec-02 */
 .sec-02 {
   transform: translateX(100%);
   opacity: 0;
@@ -443,7 +442,6 @@
 }
 
 .sec-02 .grid-wrap {
-  height: 44.175rem;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 0 2rem;
 }
@@ -458,7 +456,7 @@
 }
 
 .sec-02 .grid-wrap .grid-item .link-tit::after {
-  content: "헤리티지";
+  content: "Heritage";
   color: #fff;
   position: absolute;
   left: 4rem;
@@ -487,9 +485,9 @@
 .sec-02 .grid-wrap .grid-item .link-tit:hover > img {
   transform: scale(1.2);
 }
-/* sec-02 구현 끝 */
+/* sec-02 END */
 
-/* sec-03, sec-04 공통 디자인 구현 시작 */
+/* sec-03, sec-04 common style */
 .common-sec .grid-wrap {
   grid-template-columns: 1fr 1fr;
   gap: 0 2rem;
@@ -555,7 +553,7 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
   font-weight: bold;
 }
 
-/* sec-03, sec-04 공통 탭 컨텐츠 구현 시작 */
+/* sec-03, sec-04 common tab */
 .sec-tab-content {
   position: relative;
 }
@@ -688,23 +686,23 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
   transform: scale(1.2);
 }
 
-/* sec-03, sec-04 공통 탭 컨텐츠 구현 끝 */
-/* sec-03, sec-04 공통 디자인 구현 끝 */
-/* sec-03 구현 시작 */
+/* sec-03, sec-04 common tab END */
+/* sec-03, sec-04 common style END */
+/* sec-03 */
 .sec-03__pagination .swiper-pagination-bullet:nth-child(1)::after {
-  content: "먹고";
+  content: "EAT";
 }
 
 .sec-03__pagination .swiper-pagination-bullet:nth-child(2)::after {
-  content: "마시고";
+  content: "DRINK";
 }
 
 .sec-03__pagination .swiper-pagination-bullet:nth-child(3)::after {
-  content: "즐기자";
+  content: "ENJOY";
 }
-/* sec-03 구현 끝 */
+/* sec-03 END */
 
-/* sec-04 구현 시작 */
+/* sec-04 */
 .sec-04 {
   transform: translateY(10%);
   opacity: 0;
@@ -735,9 +733,9 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
 .sec-04__tab-cont-wrap .tab-cont-wrap > div:nth-child(4) {
   order: 3;
 }
-/* sec-04 구현 끝 */
+/* sec-04 END */
 
-/* sec-05 구현 시작 */
+/* sec-05 */
 .sec-05 {
   transform: translateX(100%);
   opacity: 0;
@@ -783,16 +781,14 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
 .sec-05 .grid-wrap .grid-item .link-tit:hover > img {
   transform: scale(1.1);
 }
-/* sec-05 구현 끝 */
+/* sec-05 END */
 
-/* 화면의 너비가 1280px 이하일 때 */
 @media (1280px >= width) {
   div[class*="__pagination"] .swiper-pagination-bullet::after {
     font-size: 13.5rem;
   }
 }
 
-/* 화면의 너비가 1025px 이하일 때 */
 @media (1025px > width) {
   .sec-01 {
     display: none;
@@ -837,7 +833,6 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
   }
 }
 
-/* 화면의 너비가 560px 이하일 때 */
 @media (560px > width) {
   div[class*="__pagination"] {
     line-height: 9.5rem;
@@ -847,16 +842,12 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
     font-size: 8.5rem;
   }
 }
-/* 섹션 구현 끝 */
+/* Sections END */
 
-/* 푸터 구현 시작 */
+/* Footer */
 .footer-bar {
   background-color: #f5f5f5;
   padding: 6rem 5.4rem;
-}
-
-.footer__cont-box-01 .cont {
-  height: 40em; /* 임시 */
 }
 
 .footer__cont-box-01 .cont-01 {
@@ -864,7 +855,7 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
 }
 
 .footer__cont-box-01 .cont-02 {
-  width: 50%;
+  width: 60%;
 }
 
 .footer__cont-box-02 {
@@ -897,9 +888,12 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
   background-color: #a0a0a0;
 }
 
-.privacy > ul > li:first-child > a,
-.privacy > ul > li:last-child > a {
+.privacy > ul > li:first-child > a {
   padding-left: 0;
+}
+
+.privacy > ul > li:last-child > a {
+  padding: 0 15px;
 }
 
 .footer__menu .depth1 {
@@ -1026,7 +1020,6 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
   opacity: 0;
 }
 
-/* 화면의 너비가 1025px 이하일 때 */
 @media (1025px >= width) {
   .footer__cont-box-01 .cont-01 {
     width: 100%;
@@ -1041,7 +1034,6 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
   }
 }
 
-/* 화면의 너비가 768px 이하일 때 */
 @media (768px >= width) {
   .footer-bar {
     padding: 3rem 2.2rem;
@@ -1075,8 +1067,8 @@ div[class*="__pagination"] .swiper-pagination-bullet::after {
 
   .copyright {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 0;
   }
 }
-/* 푸터 구현 끝 */
+/* Footer END */

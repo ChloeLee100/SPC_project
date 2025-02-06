@@ -1,15 +1,15 @@
 console.clear();
 
-// 버튼 클릭시 화면 상단으로 이동
+// Move to top when clicked
 function scrollTopBtn() {
   $(window).scroll(function () {
     let $this = $(this);
 
-    let sTop = $this.scrollTop(); // 현재 스크롤 위치
-    let wHeight = $this.height(); // 화면의 높이
-    let dHeight = $(document).height(); // 전체 높이
+    let sTop = $this.scrollTop(); // Current scroll location
+    let wHeight = $this.height(); // Window height
+    let dHeight = $(document).height(); // Height
 
-    // 스크롤이 전체 화면의 60% 이하인지 계산
+    // Calculate whether the scroll is under 60% of height
     if (sTop > dHeight * 0.6 - wHeight) {
       $(".scroll-top-btn").addClass("active");
     } else {
@@ -24,7 +24,7 @@ function scrollTopBtn() {
 
 scrollTopBtn();
 
-// 상단바 2차 메뉴 관련 코드
+// Menu 2
 function TopBarMenu__init() {
   $(".top-bar__menu-1 > ul").mouseenter(function () {
     $(".top-bar__menu-1 > ul ul").addClass("active");
@@ -112,7 +112,7 @@ function MobileSideMenu__init() {
 
 MobileSideMenu__init();
 
-/* 섹션 관련 코드 */
+/* Section code */
 function section01_swiper() {
   const swiper = new Swiper(".sec-01 .swiper", {
     loop: true,
@@ -143,11 +143,6 @@ function sec03_LeftSwiper() {
       el: ".sec-03__pagination",
       clickable: true,
     },
-    // on: {
-    // 	slideChange: function() {
-    // 		ActiveOnVisible__init();
-    // 	}
-    // }
   });
 
   swiper.on("slideChange", function () {
@@ -197,7 +192,7 @@ function sec_TabCont(no) {
     $tabCont.find(".tab-swiper").each(function () {
       let $this = $(this);
 
-      // 스와이퍼를 한번에 조작
+      // Swiper
       let tabSwiper = new Swiper($this[0], {
         effect: "fade",
         fadeEffect: { crossFade: true },
@@ -230,25 +225,19 @@ function sec_TabCont(no) {
 sec_TabCont(3);
 sec_TabCont(4);
 
-/* 발견되면 활성화시키는 라이브러리 시작 */
+/* ActiveOnVisible library */
 function ActiveOnVisible__init() {
   $(window).on("scroll", function () {
     $(".active-on-visible").each(function () {
       let $this = $(this);
-      // 요소의 상단 위치를 가져옴
       let offsetTop = $this.offset().top;
 
-      // 뷰포트 기준으로 스크롤의 위치
-      // 스크롤이 제일 상단에 있을 때는 0이다.
       let windowTop = $(window).scrollTop();
 
-      // 현재 뷰포트의 높이
       let windowHeight = $(window).height();
 
-      // 현재 스크롤 위치와 윈도우 높이의 80%를 더한 값
       let wTop = windowTop + windowHeight * 0.8;
 
-      // wTop이 offsetTop 보다 크면 요소가 화면에 보이는 상태로 판단!
       if (wTop > offsetTop) {
         $this.addClass("active");
       } else {
@@ -261,9 +250,9 @@ function ActiveOnVisible__init() {
 }
 
 ActiveOnVisible__init();
-/* 발견되면 활성화시키는 라이브러리 끝 */
+/* ActiveOnVisible library END */
 
-/* 푸터 관련 코드 */
+/* Footer code */
 function familySiteShowAndHide() {
   $(".family-site-item .site-btn").click(function () {
     let $this = $(this);
